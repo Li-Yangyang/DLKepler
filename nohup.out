@@ -51,3 +51,1490 @@ _tkinter.TclError: couldn't connect to display "localhost:12.0"
 #Done! Number of stellar in Quarter 13 is 7478
 #Done! Number of stellar in Quarter 14 is 7402
 #Done! Number of stellar in Quarter 15 is 7445
+/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/pyplot.py:522: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  max_open_warning, RuntimeWarning)
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1544, in __call__
+    return self.func(*args)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 595, in callit
+    func(*args)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 310, in idle_draw
+    self.draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py", line 12, in draw
+    super(FigureCanvasTkAgg, self).draw()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/backends/backend_agg.py", line 437, in draw
+    self.figure.draw(self.renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/figure.py", line 1493, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axes/_base.py", line 2635, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/image.py", line 141, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1190, in draw
+    ticks_to_draw = self._update_ticks(renderer)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1028, in _update_ticks
+    tick_tups = list(self.iter_ticks())  # iter_ticks calls the locator
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 971, in iter_ticks
+    majorLocs = self.major.locator()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1954, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1962, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/ticker.py", line 1908, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 2124, in get_tick_space
+    tick = self._get_tick(True)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 1792, in _get_tick
+    return XTick(self.axes, 0, '', major=major, **tick_kw)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 176, in __init__
+    self.tick1line = self._get_tick1line()
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/axis.py", line 474, in _get_tick1line
+    markeredgewidth=self._width, zorder=self._zorder)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/lines.py", line 397, in __init__
+    self._marker = MarkerStyle(marker, fillstyle)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 189, in __init__
+    self.set_marker(marker)
+  File "/home/yangyangli/.local/lib/python2.7/site-packages/matplotlib/markers.py", line 255, in set_marker
+    elif (isinstance(marker, Sized) and len(marker) in (2, 3) and
+  File "/usr/lib/python2.7/abc.py", line 132, in __instancecheck__
+    if subclass is not None and subclass in cls._abc_cache:
+RuntimeError: maximum recursion depth exceeded

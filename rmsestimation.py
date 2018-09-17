@@ -40,7 +40,7 @@ def rmsestimation(quarter, timescale):
     all_rms = []
     own_kid = []
 
-    for i,k_id in enumerate(kepid):
+    for i,k_id in enumerate(kepid[:100]):
         #print('This is '+str(kepid[i]))
         #lc path here
         file_dir = kepio.pathfinder(k_id, data_path, quarter)
@@ -91,7 +91,15 @@ def rmsestimation(quarter, timescale):
             #calculte RMS cdpp
             rms = kepstat.rms(cdpp, np.zeros(len(stddev)))
             rmscdpp = np.ones((len(cdpp)), dtype='float32') * rms
-            #print('%d has RMS %.1fhr CDPP = %d ppm\n' % (k_id,timescale, rms))
+            if rms>200:
+                plt.figure(figsize=(10,8))
+                #plt.hist(cdpp, bins =25, color = 'gold', fill = True, edgecolor = 'black', linewidth = 2.0)
+                #plt.ylabel('Count')
+                #plt.xlabel('CDPP/6.5hrs(ppm)')
+                #plt.savefig("./test/KOIQ"+str(quarter)+str(k_id)+"cdpp.png")
+                plt.scatter(intime, nordata, marker='.')
+                plt.savefig("./test/KOIQ"+str(quarter)+str(k_id)+"display_lc.png")
+            # print('%d has RMS %.1fhr CDPP = %d ppm\n' % (k_id,timescale, rms))
             all_rms.append(rms)
             own_kid.append(k_id)
             
@@ -103,10 +111,10 @@ def rmsestimation(quarter, timescale):
     plt.hist(c, bins = 25, range=(low,upp), fill = True, edgecolor = 'black', linewidth = 2.0)
     plt.ylabel('Count')
     plt.xlabel('RMSCDPP(ppm)')
-    plt.savefig("./result/KOIQ"+str(quarter)+"rms.png")
+    #plt.savefig("./result/KOIQ"+str(quarter)+"rms.png")
     result = np.transpose([own_kid, all_rms])
-    np.savetxt("./result/KOIQ"+str(quarter)+"rms.txt",result)
-    print("#Done! Number of stellar in Quarter %s is %d" % (quarter, np.shape(all_rms)[0]))
+    #np.savetxt("./result/KOIQ"+str(quarter)+"rms.txt",result)
+    #print("#Done! Number of stellar in Quarter %s is %d" % (quarter, np.shape(all_rms)[0]))
 
 if __name__ == '__main__':
     import argparse

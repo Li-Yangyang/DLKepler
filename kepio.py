@@ -95,16 +95,15 @@ def get_id(cata_path):
     """
     get kepler id from keplerstellar catalog(200038) or kepler koi(8214)
     """
-    catalog_frame= pd.read_csv(cata_path,skiprows=64)
+    catalog_frame= pd.read_csv(cata_path,skiprows=65)
     drop = catalog_frame.drop_duplicates(subset='kepid')
     kepid = drop['kepid'].values
     
     return kepid
 
-def get_property(cata_path, properties):
-    #under construction
-    a = 0
-    return 0
+def get_property(cata_path, select_cols):
+    catalog_frame = pd.read_csv(cata_path, skiprows=65)
+    return catalog_frame[select_cols]
     
 def pathfinder(k_id, data_path, quarter):
     """
