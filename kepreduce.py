@@ -12,7 +12,7 @@ from astropy.stats import sigma_clip
 
 def reduce_lc(instr, lc_path):
     tstart, tstop, bjdref, cadence = kepio.timekeys(instr, lc_path)
-            
+
     #read lc
     hdu = instr[1]
     time = hdu.data.TIME
@@ -22,7 +22,7 @@ def reduce_lc(instr, lc_path):
     work1 = np.array([time, flux])
     work1 = np.rot90(work1, 3)
     work1 = work1[~np.isnan(work1).any(1)]
-            
+
     intime = work1[:,1]
     indata = work1[:,0]
     #split lc
@@ -39,14 +39,15 @@ def reduce_lc(instr, lc_path):
     intime = np.concatenate(intime).ravel()
     indata = np.concatenate(indata).ravel()
     spline = np.concatenate(spline).ravel()
+    #do sigma cilp later
     #normalized flux using spline
     nordata = indata/spline
     #sigma clip to remove outliers
-    nordata = sigma_clip(nordata, 3, 5)
-    mask = nordata.mask
-    intime = np.ma.masked_array(intime, mask=mask)
+    #nordata = sigma_clip(nordata, 3, 5)
+    #mask = nordata.mask
+    #intime = np.ma.masked_array(intime, mask=mask)
     #compress yo ndarray
-    intime = intime.compressed()
-    nordata = nordata.compressed()
-    
+    #intime = intime.compressed()
+    #nordata = nordata.compressed()
+
     return intime, nordata
