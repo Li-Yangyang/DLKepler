@@ -27,6 +27,12 @@ for i in range(1):
         if str(j) not in qua:
             noise_dict['Q'+str(j)+'rms'] = 'nan'
         else:
-            noise_dict['Q'+str(j)+'rms'] = d[str(j)]
+            instr = fits.open(d[str(j)])
+            tstart, tstop, bjdref, cadence = kepio.timekeys(instr, d[str(i)])
+            #reduce lc
+            intime, nordata = kepreduce.reduce_lc(instr, d[str(i)])
+            #do sigma_clip
+            mean, median, std = sigma_clipped_stats(nordata, sigma = 3.0, iters = 5)
+            noise_dict['Q'+str(j)+'rms'] = std
     print(noise_dict)
     
