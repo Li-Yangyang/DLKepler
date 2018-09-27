@@ -38,5 +38,6 @@ for i in range(3):
             noise_dict['Q'+str(j)+'rms'] = std
     temp_frame = pd.DataFrame([noise_dict])
     noise_frame = noise_frame.append(temp_frame, ignore_index=True)
+    print(qua)
 print(noise_frame)
     
