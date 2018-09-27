@@ -12,7 +12,8 @@ catalog_frame= pd.read_csv(cata_path,skiprows=65)
 
 kepid = catalog_frame['kepid'].values
 
-for i in range(1):
+noise_frame = pd.DataFrame()
+for i in range(3):
     filedir = kepio.pathfinder(kepid[i], data_path, '*')
     filenames = glob.glob(filedir)
     filenames.sort()
@@ -26,7 +27,7 @@ for i in range(1):
     noise_dict = dict()
     for j in range(18):
         if str(j) not in qua:
-            noise_dict['Q'+str(j)+'rms'] = 'nan'
+            noise_dict['Q'+str(j)+'rms'] = 'NaN'
         else:
             instr = fits.open(d[str(j)])
             tstart, tstop, bjdref, cadence = kepio.timekeys(instr, d[str(j)])
@@ -35,5 +36,7 @@ for i in range(1):
             #do sigma_clip
             mean, median, std = sigma_clipped_stats(nordata, sigma = 3.0, iters = 5)
             noise_dict['Q'+str(j)+'rms'] = std
-    print(noise_dict)
+    temp_frame = pd.DataFrame.from_dict(noise_dict)
+    noise_frame = noise_frame.append(temp_frame, ignore_index=True)
+print(noise_frame)
     
