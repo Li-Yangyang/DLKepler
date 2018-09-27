@@ -20,5 +20,13 @@ for i in range(1):
     for j in range(len(filenames)):
         index.append(datepat.findall(filenames[j])[0][1:])
     d = dict(zip(index, filenames))
-    newfilenames = [d[k] for k in sorted(d.keys(), key=int)]
-    print(newfilenames)
+    #newfilenames = [d[k] for k in sorted(d.keys(), key=int)]
+    qua = sorted(d.keys(), key=int)
+    noise_dict = dict()
+    for j in range(18):
+        if str(j) not in qua:
+            noise_dict['Q'+str(j)+'rms'] = 'nan'
+        else:
+            noise_dict['Q'+str(j)+'rms'] = d[str(j)]
+    print(noise_dict)
+    
