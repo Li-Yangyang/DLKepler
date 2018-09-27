@@ -20,4 +20,5 @@ for i in range(1):
     for j in range(len(filenames)):
         index.append(datepat.findall(filenames[j])[0][1:])
     d = dict(zip(index, filenames))
-    print([(k,d[k]) for k in sorted(d.keys(), key=int)])
+    newfilenames = [d[k] for k in sorted(d.keys(), key=int)]
+    print(newfilenames)
