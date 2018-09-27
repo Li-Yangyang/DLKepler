@@ -1,9 +1,10 @@
 import numpy as np
 import pandas as pd
 from astropy.io import fits
-import kepio
+import kepio, kepreduce
 import glob
 import re
+from astropy.stats import sigma_clipped_stats
 
 cata_path = '../catalog/cumulative.csv'
 data_path = '/scratch/kepler_data/'
