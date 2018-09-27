@@ -28,9 +28,9 @@ for i in range(1):
             noise_dict['Q'+str(j)+'rms'] = 'nan'
         else:
             instr = fits.open(d[str(j)])
-            tstart, tstop, bjdref, cadence = kepio.timekeys(instr, d[str(i)])
+            tstart, tstop, bjdref, cadence = kepio.timekeys(instr, d[str(j)])
             #reduce lc
-            intime, nordata = kepreduce.reduce_lc(instr, d[str(i)])
+            intime, nordata = kepreduce.reduce_lc(instr, d[str(j)])
             #do sigma_clip
             mean, median, std = sigma_clipped_stats(nordata, sigma = 3.0, iters = 5)
             noise_dict['Q'+str(j)+'rms'] = std
