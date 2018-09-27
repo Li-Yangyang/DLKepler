@@ -36,7 +36,7 @@ for i in range(3):
             #do sigma_clip
             mean, median, std = sigma_clipped_stats(nordata, sigma = 3.0, iters = 5)
             noise_dict['Q'+str(j)+'rms'] = std
-    temp_frame = pd.DataFrame.from_dict(noise_dict)
+    temp_frame = pd.DataFrame.from_dict(noise_dict, index=[0])
     noise_frame = noise_frame.append(temp_frame, ignore_index=True)
 print(noise_frame)
     
