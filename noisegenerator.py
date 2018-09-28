@@ -10,7 +10,7 @@ cata_path = '../catalog/keplerstellar1'
 data_path = '/scratch/kepler_data/'
 catalog_frame= pd.read_csv(cata_path)
 
-kepid = np.random.choice(catalog_frame['kepid'].values, 10)
+kepid = np.random.choice(catalog_frame['kepid'].values, 1000)
 
 noise_frame = pd.DataFrame()
 for i in range(len(kepid)):
