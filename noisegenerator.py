@@ -40,4 +40,4 @@ for i in range(len(kepid)):
     temp_frame = pd.DataFrame([noise_dict])
     noise_frame = noise_frame.append(temp_frame, ignore_index=True)
 
-noise_frame.to_csv('../catalog/kepstellarnoise.csv')
+noise_frame.to_csv('../catalog/kepstellarnoise1000.csv')
