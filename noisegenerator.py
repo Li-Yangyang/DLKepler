@@ -6,11 +6,11 @@ import glob
 import re
 from astropy.stats import sigma_clipped_stats
 
-cata_path = '../catalog/cumulative.csv'
+cata_path = '../catalog/keplerstellar1'
 data_path = '/scratch/kepler_data/'
-catalog_frame= pd.read_csv(cata_path,skiprows=65)
+catalog_frame= pd.read_csv(cata_path)
 
-kepid = catalog_frame['kepid'].values
+kepid = np.random.choice(catalog_frame['kepid'].values, 10)
 
 noise_frame = pd.DataFrame()
 for i in range(len(kepid)):
@@ -28,7 +28,7 @@ for i in range(len(kepid)):
     noise_dict['kepid'] = kepid[i]
     for j in range(18):
         if str(j) not in qua:
-            noise_dict['Q'+str(j)+'rms'] = 'NaN'
+            noise_dict['Q'+str(j)+'rms'] = float('NaN')
         else:
             instr = fits.open(d[str(j)])
             tstart, tstop, bjdref, cadence = kepio.timekeys(instr, d[str(j)])
@@ -40,4 +40,4 @@ for i in range(len(kepid)):
     temp_frame = pd.DataFrame([noise_dict])
     noise_frame = noise_frame.append(temp_frame, ignore_index=True)
 
-noise_frame.to_csv('../catalog/noise.csv')
+noise_frame.to_csv('../catalog/kepstellarnoise.csv')
