@@ -4,29 +4,143 @@
   return f(*args, **kwds)
 /usr/lib/python3.6/importlib/_bootstrap.py:219: ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
   return f(*args, **kwds)
-(1, 4743) (1, 4743)
-(1, 61859) (1, 61859)
-(1, 64397) (1, 64397)
-(1, 51494) (1, 51494)
-(1, 64434) (1, 64434)
-(1, 65085) (1, 65085)
-(1, 51963) (1, 51963)
-(1, 51938) (1, 51938)
-(1, 51204) (1, 51204)
-(1, 64971) (1, 64971)
-/usr/local/lib/python3.6/dist-packages/_pytest/assertion/rewrite.py:6: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
-  import imp
-/usr/lib/python3.6/importlib/_bootstrap.py:219: ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
-  return f(*args, **kwds)
-/usr/lib/python3.6/importlib/_bootstrap.py:219: ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
-  return f(*args, **kwds)
-(1, 64401) (1, 64401)
-(1, 54658) (1, 54658)
-(1, 46489) (1, 46489)
-(1, 64960) (1, 64960)
-(1, 64474) (1, 64474)
-(1, 64431) (1, 64431)
-(1, 52054) (1, 52054)
-(1, 110260) (1, 110260)
-(1, 64359) (1, 64359)
-(1, 51611) (1, 51611)
+0.00037477277534989664
+this is the orbital period inserted 78.73513770365324 (days)
+this is the duration inserted 18.299635934998243 (hrs)
+this is the semi-major axis 0.2962192191100107 (AU)
+this is the planet radius 0.06598449066399326 (stellar radius)
+this is the stellar radius 7.100529698000451 (sun radius)
+this is the inclination angle 83.40150063025878
+0.00035522758194819363
+this is the orbital period inserted 83.89652456720299 (days)
+this is the duration inserted 17.39996967079471 (hrs)
+this is the semi-major axis 0.28114374645320195 (AU)
+this is the planet radius 0.0029171002119593625 (stellar radius)
+this is the stellar radius 9.32494102453447 (sun radius)
+this is the inclination angle 81.23766063788383
+0.0011218141967860018
+this is the orbital period inserted 23.65801802057588 (days)
+this is the duration inserted 9.003747115231695 (hrs)
+this is the semi-major axis 0.20599008415200387 (AU)
+this is the planet radius 0.0949782802550491 (stellar radius)
+this is the stellar radius 2.4414740267752304 (sun radius)
+this is the inclination angle 88.04395662373139
+0.0003391401455324908
+this is the orbital period inserted 29.200886793395668 (days)
+this is the duration inserted 14.829727744241794 (hrs)
+this is the semi-major axis 0.2578947520189285 (AU)
+this is the planet radius 0.031235948132292496 (stellar radius)
+this is the stellar radius 9.28603787637731 (sun radius)
+this is the inclination angle 80.80902672100589
+0.00022216120071441323
+this is the orbital period inserted 70.21372645806443 (days)
+this is the duration inserted 3.730155470454093 (hrs)
+this is the semi-major axis 0.42143033185346745 (AU)
+this is the planet radius 0.05901410691220976 (stellar radius)
+this is the stellar radius 4.393974395932312 (sun radius)
+this is the inclination angle 87.08400528379845
+0.0016565887681699093
+this is the orbital period inserted 58.31712594314087 (days)
+this is the duration inserted 1.1811217468177644 (hrs)
+this is the semi-major axis 0.22095604363271226 (AU)
+this is the planet radius 0.05557484373197203 (stellar radius)
+this is the stellar radius 3.307873482375946 (sun radius)
+this is the inclination angle 85.78868672536763
+0.0004645482662606881
+this is the orbital period inserted 26.312379479146134 (days)
+this is the duration inserted 4.6573277554492325 (hrs)
+this is the semi-major axis 0.20248128343724328 (AU)
+this is the planet radius 0.06555487989049995 (stellar radius)
+this is the stellar radius 11.430463761786669 (sun radius)
+this is the inclination angle 73.80998971166167
+0.0005471587295611641
+this is the orbital period inserted 15.378173547366789 (days)
+this is the duration inserted 19.976912769166432 (hrs)
+this is the semi-major axis 0.14809888558811876 (AU)
+this is the planet radius 0.05837733787028431 (stellar radius)
+this is the stellar radius 11.46915970663724 (sun radius)
+this is the inclination angle 69.72671758403854
+0.0026730856867281773
+this is the orbital period inserted 44.74059479924061 (days)
+this is the duration inserted 13.488700407765768 (hrs)
+this is the semi-major axis 0.3073818392910104 (AU)
+this is the planet radius 0.05731762867333402 (stellar radius)
+this is the stellar radius 10.533914492786668 (sun radius)
+this is the inclination angle 80.56482896211072
+0.0006111483579844263
+this is the orbital period inserted 16.93160125506417 (days)
+this is the duration inserted 8.628218287343103 (hrs)
+this is the semi-major axis 0.14725867390462408 (AU)
+this is the planet radius 0.04280774713421683 (stellar radius)
+this is the stellar radius 6.635816005940488 (sun radius)
+this is the inclination angle 77.96209846704619
+0.0009442271891110323
+this is the orbital period inserted 20.03417562836256 (days)
+this is the duration inserted 16.771351274930645 (hrs)
+this is the semi-major axis 0.18209622353730043 (AU)
+this is the planet radius 0.06956746157708052 (stellar radius)
+this is the stellar radius 5.227948012266055 (sun radius)
+this is the inclination angle 84.70059376077798
+0.00025418982808183855
+this is the orbital period inserted 48.035601999834654 (days)
+this is the duration inserted 15.356099321838437 (hrs)
+this is the semi-major axis 0.34868210460693355 (AU)
+this is the planet radius 0.011196616222611276 (stellar radius)
+this is the stellar radius 7.069813129545473 (sun radius)
+this is the inclination angle 85.08115008989543
+0.0002531829146628575
+this is the orbital period inserted 13.540749063474049 (days)
+this is the duration inserted 13.03189471774077 (hrs)
+this is the semi-major axis 0.15229535010403478 (AU)
+this is the planet radius 0.040501978698571674 (stellar radius)
+this is the stellar radius 9.677977386910163 (sun radius)
+this is the inclination angle 73.5690251957543
+0.0005306159934675966
+this is the orbital period inserted 22.54406680660574 (days)
+this is the duration inserted 10.05482163641582 (hrs)
+this is the semi-major axis 0.15681123132672592 (AU)
+this is the planet radius 0.020404488442106232 (stellar radius)
+this is the stellar radius 11.659905966528234 (sun radius)
+this is the inclination angle 69.6015067346061
+0.00024202076772962035
+this is the orbital period inserted 76.61787812798775 (days)
+this is the duration inserted 2.9879581945642757 (hrs)
+this is the semi-major axis 0.4827669830989046 (AU)
+this is the planet radius 0.020596918695055328 (stellar radius)
+this is the stellar radius 4.695789523896409 (sun radius)
+this is the inclination angle 87.37041504907032
+0.0007177176339098221
+this is the orbital period inserted 68.47978180533445 (days)
+this is the duration inserted 8.9805677565725 (hrs)
+this is the semi-major axis 0.3124983756077486 (AU)
+this is the planet radius 0.01534582381843817 (stellar radius)
+this is the stellar radius 3.9487194735405358 (sun radius)
+this is the inclination angle 86.72407633737477
+0.0004498870016005464
+this is the orbital period inserted 46.16965366850849 (days)
+this is the duration inserted 10.643938850724405 (hrs)
+this is the semi-major axis 0.29625320882432693 (AU)
+this is the planet radius 0.020642021711361057 (stellar radius)
+this is the stellar radius 12.285544618022445 (sun radius)
+this is the inclination angle 78.77999528076398
+9.027437222776998e-05
+this is the orbital period inserted 80.66519646076337 (days)
+this is the duration inserted 12.293505255484272 (hrs)
+this is the semi-major axis 0.4771235014063252 (AU)
+this is the planet radius 0.013249426694651015 (stellar radius)
+this is the stellar radius 5.788091182110328 (sun radius)
+this is the inclination angle 86.92894558943792
+0.0005118628908537233
+this is the orbital period inserted 58.906153494815214 (days)
+this is the duration inserted 4.097274933981805 (hrs)
+this is the semi-major axis 0.23624523885613208 (AU)
+this is the planet radius 0.03895775304746941 (stellar radius)
+this is the stellar radius 7.600759737601146 (sun radius)
+this is the inclination angle 81.07316188888518
+0.0014494360157655895
+this is the orbital period inserted 50.7105962241775 (days)
+this is the duration inserted 6.823886230544804 (hrs)
+this is the semi-major axis 0.35346829212293385 (AU)
+this is the planet radius 0.05427762327844243 (stellar radius)
+this is the stellar radius 10.1532097701124 (sun radius)
+this is the inclination angle 81.96750621150532

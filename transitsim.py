@@ -10,6 +10,7 @@ import numpy as np
 from KOI_simulation_utils import *
 import matplotlib.pylab as plt
 from transit_basic import *
+from kepplot import *
 
 def io(cata_path, columnsnames, newnames):
     renames = dict(zip(columnsnames, newnames))
@@ -18,6 +19,47 @@ def io(cata_path, columnsnames, newnames):
     paras_frame = paras_frame.dropna()
 
     return paras_frame
+
+class TransitProfile(object):
+    """
+    """
+
+    def __init__(self, period, t0, phase_array, f, duration):
+        self.period = period
+        self.t0 = t0
+        self.phase_array = phase_array
+        self.f = f
+        self.duration = duration
+
+        #From Yinan's code kepler_simu_utils.py
+
+        lv = local_view(self.phase_array, self.f, self.period, self.duration)
+
+        t_min= self.duration*-3.0
+        t_max= self.duration*3.0
+
+        time_array=np.linspace(t_min, t_max, lv.size)
+
+        data_lc = dict()
+        data_lc['phase'] = time_array
+        data_lc['flux'] = lv
+        self.transit_profile = data_lc
+
+    def check_snr(self):
+
+        time_array=self.transit_profile['phase']#*24.0
+        #start to measure the SNR around the signal.
+        index_snr = np.argwhere((time_array > self.duration*1.0) | (time_array < self.duration*-1.0))
+        lv = self.transit_profile['flux']
+        mean_snr, median_snr, std_snr = sigma_clipped_stats(lv[index_snr])
+
+        index_profile = np.argwhere((time_array <= self.duration*1.0) & (time_array >= self.duration*-1.0))
+
+        if lv[index_profile].min() <= median_snr - 3*std_snr:
+
+            return 1.0
+        else:
+            return 0.0
 
 def simtransitpop(cata_path, data_path, n):
     """
@@ -49,24 +91,34 @@ def simtransitpop(cata_path, data_path, n):
             #bareflux = bareflux[sorted_i]
             #transitflux = transitflux[sorted_i]
             std = np.std(flux)
-            print(std)
-            if 3*std>(1-np.min(flux)):
+            print(B.kepid,std)
+            TP = TransitProfile(pop.P_pop, t0, phase, flux, pop.duration_pop)
+            injection = TP.check_snr()
+            if injection == 1.0:
                 plt.figure(figsize=(10,8))
                 plt.scatter(phase, flux, marker='.', linestyle='None', color = 'black')
                 #plt.ylim(0.995, 1.0025)
                 plt.title('folded_lc#'+str(i))
                 plt.xlabel('phase mod period (days)')
                 plt.ylabel('Normalized Brightness')
-                plt.savefig("./testsim/"+str(i)+"_globalnoise.png")
+                plt.savefig("./testsim/"+str(i)+"_addglobalnoise.png")
                 plt.close()
                 #plt.scatter(phase, bareflux,  marker='.', linestyle='None', color = 'black')
                 #plt.scatter(phase, transitflux,  marker='.', linestyle='None', color = 'red')
-                plt.figure(figsize=(10,8))
-                plt.scatter(t, transitflux, marker='.', linestyle='None', color='black')
-                plt.savefig("./testsim/"+str(i)+"_globalnoise_notfold.png")
+                #plt.figure(figsize=(10,8))
+                #plt.scatter(t, transitflux, marker='.', linestyle='None', color='black')
+                #plt.savefig("./testsim/"+str(i)+"_globalnoise_notfold.png")
                 #plt.show()
+                #plt.close()
+                #print(np.shape(phase), np.shape(flux))
+                #local view plot:
+                profile = TP.transit_profile
+                plt.scatter(profile['phase'], profile['flux'], marker='.', linestyle='None', color = 'black')
+                plt.title('folded_lc_local_vielw#'+str(i))
+                plt.xlabel('phase mod period (days)')
+                plt.ylabel('Normalized Brightness')
+                plt.savefig("./testsim/"+str(i)+"_addglobalnoise(local_view).png")
                 plt.close()
-                print(np.shape(phase), np.shape(flux))
                 print('this is the orbital period inserted %s (days)' % pop.P_pop)
                 print('this is the duration inserted %s (hrs)' % pop.duration_pop)
                 print('this is the semi-major axis %s (AU)' % pop.a_pop)

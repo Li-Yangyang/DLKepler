@@ -36,11 +36,11 @@ def incl(rprs, a, srad, duration, P):
 class ParaSampler(object):
     """
     P is uniform distribution from 10 days to 100days
-    rprs is uniform distribution from 0 to 0.1
+    rprs is uniform distribution from 0.001 to 0.1
     duration is from 97% percentile range
     Rs is from 99% percentile range
     Ms is from uniform distribution from min to max
-    a is calculted from (P/365/M)^(1/3)
+    a is calculted from (P/365)^(2/3)*M^(1/3)
     inc is from cos-1(sqrt(((1+rprs)^2-(aoR*sin(piT/P))^2)/aoR^2))
     """
 
@@ -63,7 +63,7 @@ class ParaSampler(object):
         self.P_pop = P_pop
         self.inc_pop = inc_pop
         self.srad_pop = srad_pop
-        self.ars_pop = 15.0537*self.a_pop/self.srad_pop
+        self.ars_pop = 215.0537*self.a_pop/self.srad_pop
 
 class LcNoiseSampler(object):
     """
