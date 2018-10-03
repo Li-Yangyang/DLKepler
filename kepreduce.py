@@ -51,3 +51,25 @@ def reduce_lc(instr, lc_path):
     #nordata = nordata.compressed()
 
     return intime, nordata
+
+def fetchtseries(instr, lc_path):
+    tstart, tstop, bjdref, cadence = kepio.timekeys(instr, lc_path)
+
+    #read lc
+    hdu = instr[1]
+    time = hdu.data.TIME
+    time = time +bjdref -2454900
+    flux = hdu.data.PDCSAP_FLUX
+    #filter data
+    work1 = np.array([time, flux])
+    work1 = np.rot90(work1, 3)
+    work1 = work1[~np.isnan(work1).any(1)]
+
+    intime = work1[:,1]
+    indata = work1[:,0]
+    #split lc
+    intime, indata = keputils.split(intime, indata, gap_width = 0.75)
+
+    intime = np.concatenate(intime).ravel()
+
+    return intime

@@ -90,21 +90,21 @@ def timekeys(instr, filename):
         cadence = 1625.35
 
     return tstart, tstop, bjdref, cadence
-    
-def get_id(cata_path):
+
+def get_id(catalog):
     """
     get kepler id from keplerstellar catalog(200038) or kepler koi(8214)
     """
-    catalog_frame= pd.read_csv(cata_path,skiprows=65)
-    drop = catalog_frame.drop_duplicates(subset='kepid')
-    kepid = drop['kepid'].values
-    
+    #catalog_frame= pd.read_csv(cata_path,skiprows=67)
+    #drop = catalog_frame.drop_duplicates(subset='kepid') delete this cuz consider multiple planets sys
+    kepid = catalog['kepid'].values
+
     return kepid
 
-def get_property(cata_path, select_cols):
-    catalog_frame = pd.read_csv(cata_path, skiprows=65)
-    return catalog_frame[select_cols]
-    
+def get_property(catalog, select_cols):
+    #catalog_frame = pd.read_csv(cata_path, skiprows=67)
+    return catalog[select_cols]
+
 def pathfinder(k_id, data_path, quarter):
     """
     find relative light curve data
@@ -123,7 +123,3 @@ def pathfinder(k_id, data_path, quarter):
     #quarter = 1
     #timescale = 6.5
     return file_dir
-
-
-
-

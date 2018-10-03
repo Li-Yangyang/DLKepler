@@ -15,6 +15,7 @@ from astropy.constants import G
 from astropy import constants as const
 from astropy.stats import sigma_clipped_stats
 import math
+import re
 
 #cata_path = '../../../../catalog/Kepler/cumulative.csv'
 #columns = ['koi_ror', 'koi_duration', 'koi_sma', 'koi_period', 'koi_srad', 'koi_smass']
@@ -68,41 +69,33 @@ class ParaSampler(object):
 class LcNoiseSampler(object):
     """
     """
-    def __init__(self, cata_path, data_path):
-        self.cata_path = cata_path
+    def __init__(self, catalog, data_path):
+        self.catalog = catalog
         self.data_path = data_path
-        self.kepid = np.random.choice(kepio.get_id(self.cata_path))
+        self.kepid = np.random.choice(kepio.get_id(self.catalog))
 
     def generator(self, timescale):
-        filedir = kepio.pathfinder(self.kepid, self.data_path, '*')
-        filenames = glob.glob(filedir)
         all_time = []
         all_flux = []
+        filedir = kepio.pathfinder(self.kepid, self.data_path, '*')
+        filenames = glob.glob(filedir)
+        filenames.sort()
+        datepat = re.compile(r'Q+\d+')
+        index = 0
         for i in range(len(filenames)):
+            index = datepat.findall(filenames[i])[0][1:]
+            rms = self.catalog.loc[lambda df: df.kepid == self.kepid, 'Q'+index+'rms'].values[0]
             #read into cadence
             instr = fits.open(filenames[i])
-            tstart, tstop, bjdref, cadence = kepio.timekeys(instr, filenames[i])
-            #reduce lc
-            intime, nordata = kepreduce.reduce_lc(instr, filenames[i])
-            #do sigma_clip
-            mean, median, std = sigma_clipped_stats(nordata, sigma = 3.0, iters = 5)
-            #calculte runing stddev
-            stddev = kepstat.running_frac_std(intime, nordata, timescale / 24) * 1.0e6
-            #cdpp
-            cdpp = stddev / math.sqrt(timescale * 3600.0 / cadence)
-            # filter cdpp
-            for i in range(len(cdpp)):
-                if cdpp[i] > np.median(cdpp) * 10.0:
-                    cdpp[i] = cdpp[i - 1]
-
-            #calculte RMS cdpp
-            rms = kepstat.rms(cdpp, np.zeros(len(stddev)))
+            #read into time series
+            intime = kepreduce.fetchtseries(instr, filenames[i])
+            #simulate
             rs = np.random.RandomState(seed=13)
-            flux1 = np.zeros(nordata.size)+ median
-            errors1 = std*np.ones_like(nordata)#use global std
+            flux1 = np.zeros(intime.size)+ 1.0
+            errors1 = rms*np.ones_like(intime)#use global std
             #errors1 = cdpp*1e-06*np.ones_like(nordata)*math.sqrt(timescale * 3600.0 / cadence)#correct from cdpp to std
             #add gaussian noise
-            flux1 += errors1*rs.randn(len(nordata))
+            flux1 += errors1*rs.randn(len(intime))
             all_time.append(intime)
             all_flux.append(flux1)
             instr.close()

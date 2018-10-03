@@ -7,14 +7,15 @@ Created on Fri Sep 14 09:45:52 2018
 #from transit_basic import *
 import kepio, keputils
 import numpy as np
+import pandas as pd
 from KOI_simulation_utils import *
 import matplotlib.pylab as plt
 from transit_basic import *
 from kepplot import *
 
-def io(cata_path, columnsnames, newnames):
+def io(catalog, columnsnames, newnames):
     renames = dict(zip(columnsnames, newnames))
-    paras_frame = kepio.get_property(cata_path, columnsnames)
+    paras_frame = kepio.get_property(catalog, columnsnames)
     paras_frame = paras_frame.rename(index=str, columns=renames)
     paras_frame = paras_frame.dropna()
 
@@ -64,7 +65,8 @@ class TransitProfile(object):
 def simtransitpop(cata_path, data_path, n):
     """
     """
-    paras_frame = io(cata_path, ['koi_duration', 'koi_srad', 'koi_smass'], \
+    catalog= pd.read_csv(cata_path, skiprows=67)
+    paras_frame = io(catalog, ['koi_duration', 'koi_srad', 'koi_smass'], \
     ['duration', 'srad', 'smass'])
     duration = paras_frame['duration'].values
     srad = paras_frame['srad'].values
@@ -76,7 +78,7 @@ def simtransitpop(cata_path, data_path, n):
             warnings.filterwarnings("error")
             pop = ParaSampler(smass, srad, duration)
             warnings.resetwarnings()
-            B = LcNoiseSampler(cata_path, data_path)
+            B = LcNoiseSampler(catalog, data_path)
             t, bareflux = B.generator(6.5)
             t0 = np.random.choice(t)
             transitflux = batman_planet(t0, pop.P_pop, pop.rprs_pop,pop.ars_pop,\
@@ -101,7 +103,7 @@ def simtransitpop(cata_path, data_path, n):
                 plt.title('folded_lc#'+str(i))
                 plt.xlabel('phase mod period (days)')
                 plt.ylabel('Normalized Brightness')
-                plt.savefig("./testsim/"+str(i)+"_addglobalnoise.png")
+                plt.savefig("./testsim/"+str(i)+"_addglobalnoisev2.png")
                 plt.close()
                 #plt.scatter(phase, bareflux,  marker='.', linestyle='None', color = 'black')
                 #plt.scatter(phase, transitflux,  marker='.', linestyle='None', color = 'red')
@@ -117,7 +119,7 @@ def simtransitpop(cata_path, data_path, n):
                 plt.title('folded_lc_local_vielw#'+str(i))
                 plt.xlabel('phase mod period (days)')
                 plt.ylabel('Normalized Brightness')
-                plt.savefig("./testsim/"+str(i)+"_addglobalnoise(local_view).png")
+                plt.savefig("./testsim/"+str(i)+"_addglobalnoise(local_view)v2.png")
                 plt.close()
                 print('this is the orbital period inserted %s (days)' % pop.P_pop)
                 print('this is the duration inserted %s (hrs)' % pop.duration_pop)
@@ -136,11 +138,15 @@ def simtransitpop(cata_path, data_path, n):
 
 if __name__ == '__main__':
     import argparse
+    import time
+    start = time.time()
     parser = argparse.ArgumentParser(description='transit lightcurve population simulation generator')
     parser.add_argument("-v", "--version",action='version', version='%(prog)s 0.5')
     parser.add_argument('n', help='population number.',\
                         type=int)
-    cata_path = '../catalog/cumulative.csv'
+    cata_path = '../catalog/cumulative+noise.csv'
     data_path = '/scratch/kepler_data/'
     args = parser.parse_args()
     simtransitpop(cata_path, data_path, n=args.n)
+    end = time.time()
+    print(end - start)
