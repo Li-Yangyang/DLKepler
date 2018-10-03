@@ -62,10 +62,41 @@ class TransitProfile(object):
         else:
             return 0.0
 
-def simtransitpop(cata_path, data_path, n):
+def simulate_one(smass, srad, duration, catalog, data_path):
+    import warnings
+    warnings.filterwarnings("error")
+    pop = ParaSampler(smass, srad, duration)
+    warnings.resetwarnings()
+    B = LcNoiseSampler(catalog, data_path)
+    t, bareflux = B.generator(6.5)
+    t0 = np.random.choice(t)
+    transitflux = batman_planet(t0, pop.P_pop, pop.rprs_pop,pop.ars_pop,\
+            pop.inc_pop, 0, 90, t)
+    final_flux = bareflux*transitflux
+    time_array = t
+    flux = final_flux
+    phase = keputils.phase_fold_time(time_array, pop.P_pop, t0)
+    sorted_i = np.argsort(phase)
+    phase = phase[sorted_i]
+    flux = flux[sorted_i]
+    TP = TransitProfile(pop.P_pop, t0, phase, flux, pop.duration_pop)
+    injection = TP.check_snr()
+    if injection == 1.0:
+        profile = TP.transit_profile
+        para = {'t0':t0, 'Period':pop.P_pop, 'rprs':pop.rprs_pop, 'ars':pop.ars_pop,\
+                'inclination':pop.inc_pop, 'duration':pop.duraiton_pop, 'prekid':B.kepid, 'std': np.std(flux)}
+        lc = pd.DataFrame(np.array([profile['phase'], profile['flux']), columns=['phase', 'flux'])
+        return para, lc
+    else:
+        return None, None
+                    
+class Simtransitpop(object):
     """
     """
-    catalog= pd.read_csv(cata_path, skiprows=67)
+    def __ini__(self, catalog, data_path, n):
+        self.catalog = catalog
+        self.data_path = data_path
+        self.n = n
     paras_frame = io(catalog, ['koi_duration', 'koi_srad', 'koi_smass'], \
     ['duration', 'srad', 'smass'])
     duration = paras_frame['duration'].values
@@ -74,62 +105,10 @@ def simtransitpop(cata_path, data_path, n):
     i = 0
     while(i<n):
         try:
-            import warnings
-            warnings.filterwarnings("error")
-            pop = ParaSampler(smass, srad, duration)
-            warnings.resetwarnings()
-            B = LcNoiseSampler(catalog, data_path)
-            t, bareflux = B.generator(6.5)
-            t0 = np.random.choice(t)
-            transitflux = batman_planet(t0, pop.P_pop, pop.rprs_pop,pop.ars_pop,\
-            pop.inc_pop, 0, 90, t)
-            final_flux = bareflux*transitflux
-            time_array = t
-            flux = final_flux
-            phase = keputils.phase_fold_time(time_array, pop.P_pop, t0)
-            sorted_i = np.argsort(phase)
-            phase = phase[sorted_i]
-            flux = flux[sorted_i]
-            #bareflux = bareflux[sorted_i]
-            #transitflux = transitflux[sorted_i]
-            std = np.std(flux)
-            print(B.kepid,std)
-            TP = TransitProfile(pop.P_pop, t0, phase, flux, pop.duration_pop)
-            injection = TP.check_snr()
-            if injection == 1.0:
-                plt.figure(figsize=(10,8))
-                plt.scatter(phase, flux, marker='.', linestyle='None', color = 'black')
-                #plt.ylim(0.995, 1.0025)
-                plt.title('folded_lc#'+str(i))
-                plt.xlabel('phase mod period (days)')
-                plt.ylabel('Normalized Brightness')
-                plt.savefig("./testsim/"+str(i)+"_addglobalnoisev2.png")
-                plt.close()
-                #plt.scatter(phase, bareflux,  marker='.', linestyle='None', color = 'black')
-                #plt.scatter(phase, transitflux,  marker='.', linestyle='None', color = 'red')
-                #plt.figure(figsize=(10,8))
-                #plt.scatter(t, transitflux, marker='.', linestyle='None', color='black')
-                #plt.savefig("./testsim/"+str(i)+"_globalnoise_notfold.png")
-                #plt.show()
-                #plt.close()
-                #print(np.shape(phase), np.shape(flux))
-                #local view plot:
-                profile = TP.transit_profile
-                plt.scatter(profile['phase'], profile['flux'], marker='.', linestyle='None', color = 'black')
-                plt.title('folded_lc_local_vielw#'+str(i))
-                plt.xlabel('phase mod period (days)')
-                plt.ylabel('Normalized Brightness')
-                plt.savefig("./testsim/"+str(i)+"_addglobalnoise(local_view)v2.png")
-                plt.close()
-                print('this is the orbital period inserted %s (days)' % pop.P_pop)
-                print('this is the duration inserted %s (hrs)' % pop.duration_pop)
-                print('this is the semi-major axis %s (AU)' % pop.a_pop)
-                print('this is the planet radius %s (stellar radius)' % pop.rprs_pop)
-                print('this is the stellar radius %s (sun radius)' % pop.srad_pop)
-                print('this is the inclination angle %s' % pop.inc_pop)
-                i = i + 1
-            else:
-                continue
+           para, lc = simulate_one(smass, srad, duration, catalog, data_path)
+           if(para!=None and lc!=None):     
+             i = i + 1
+             #save to hdf
         except RuntimeWarning:
             pass
 
@@ -147,6 +126,7 @@ if __name__ == '__main__':
     cata_path = '../catalog/cumulative+noise.csv'
     data_path = '/scratch/kepler_data/'
     args = parser.parse_args()
-    simtransitpop(cata_path, data_path, n=args.n)
+    catalog= pd.read_csv(cata_path, skiprows=67)
+    simtransitpop(catalog, data_path, n=args.n)
     end = time.time()
     print(end - start)
