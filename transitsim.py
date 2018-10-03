@@ -97,20 +97,21 @@ class Simtransitpop(object):
         self.catalog = catalog
         self.data_path = data_path
         self.n = n
-    paras_frame = io(catalog, ['koi_duration', 'koi_srad', 'koi_smass'], \
-    ['duration', 'srad', 'smass'])
-    duration = paras_frame['duration'].values
-    srad = paras_frame['srad'].values
-    smass = paras_frame['smass'].values
-    i = 0
-    while(i<n):
-        try:
-           para, lc = simulate_one(smass, srad, duration, catalog, data_path)
-           if(para!=None and lc!=None):     
-             i = i + 1
-             #save to hdf
-        except RuntimeWarning:
-            pass
+    
+        paras_frame = io(self.catalog, ['koi_duration', 'koi_srad', 'koi_smass'], \
+            ['duration', 'srad', 'smass'])
+        duration = paras_frame['duration'].values
+        srad = paras_frame['srad'].values
+        smass = paras_frame['smass'].values
+        i = 0
+        while(i<self.n):
+            try:
+                para, lc = simulate_one(smass, srad, duration, self.catalog, self.data_path)
+                if(para!=None and lc!=None):     
+                    i = i + 1
+                    #save to hdf
+            except RuntimeWarning:
+                pass
 
 
     #return all_phase, all_norflux
