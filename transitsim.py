@@ -12,6 +12,7 @@ from KOI_simulation_utils import *
 import matplotlib.pylab as plt
 from transit_basic import *
 from kepplot import *
+import h5py
 
 def io(catalog, columnsnames, newnames):
     renames = dict(zip(columnsnames, newnames))
@@ -90,32 +91,22 @@ def simulate_one(smass, srad, duration, catalog, data_path):
     else:
         return None, None
                     
-class Simtransitpop(object):
-    """
-    """
-    def __ini__(self, catalog, data_path, n):
-        self.catalog = catalog
-        self.data_path = data_path
-        self.n = n
-    
-        paras_frame = io(self.catalog, ['koi_duration', 'koi_srad', 'koi_smass'], \
-            ['duration', 'srad', 'smass'])
-        duration = paras_frame['duration'].values
-        srad = paras_frame['srad'].values
-        smass = paras_frame['smass'].values
-        i = 0
-        while(i<self.n):
-            try:
-                para, lc = simulate_one(smass, srad, duration, self.catalog, self.data_path)
-                if(para!=None and lc!=None):     
-                    i = i + 1
-                    #save to hdf
-            except RuntimeWarning:
-                pass
-
-
-    #return all_phase, all_norflux
-
+def save_to_hdf(para, lc, label, filename=None):
+    if filename is None:
+        filename = os.path.join('./result/','simpopset.h5')
+    #mode:  Read/write if exists, create otherwise (default)                               
+    f = h5py.File(filename,'a')
+    grp = f.create_group(str(label))
+    names = ['parameters','data']
+    formats = ['S16','f8']
+    dtype = dict(names = names, formats=formats)
+    para_array = np.array(list(para.items()), dtype=dtype)                               
+    lc_array = lc.values
+    grp.create_dataset('parameters', data=para_array)
+    grp.create_dataset('lc', data=lc_array)
+                                    
+    return f
+                                    
 if __name__ == '__main__':
     import argparse
     import time
@@ -128,6 +119,24 @@ if __name__ == '__main__':
     data_path = '/scratch/kepler_data/'
     args = parser.parse_args()
     catalog= pd.read_csv(cata_path, skiprows=67)
-    simtransitpop(catalog, data_path, n=args.n)
+    
+    paras_frame = io(self.catalog, ['koi_duration', 'koi_srad', 'koi_smass'], \
+            ['duration', 'srad', 'smass'])
+    duration = paras_frame['duration'].values
+    srad = paras_frame['srad'].values
+    smass = paras_frame['smass'].values
+    i = 0
+    while(i<args.n):
+        try:
+            para, lc = simulate_one(smass, srad, duration, catalog, data_path)
+            if(para!=None and lc!=None):     
+                i = i + 1
+                #save to hdf
+                sf = save_to_hdf(para, lc, args.n)
+                sf.close()                    
+        except RuntimeWarning:
+            pass
+
+    #simtransitpop(catalog, data_path, n=args.n)
     end = time.time()
     print(end - start)
