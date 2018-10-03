@@ -86,7 +86,7 @@ def simulate_one(smass, srad, duration, catalog, data_path):
         profile = TP.transit_profile
         para = {'t0':t0, 'Period':pop.P_pop, 'rprs':pop.rprs_pop, 'ars':pop.ars_pop,\
                 'inclination':pop.inc_pop, 'duration':pop.duraiton_pop, 'prekid':B.kepid, 'std': np.std(flux)}
-        lc = pd.DataFrame(np.array([profile['phase'], profile['flux']), columns=['phase', 'flux'])
+        lc = pd.DataFrame(np.array(profile['phase'], profile['flux']), columns=['phase', 'flux'])
         return para, lc
     else:
         return None, None
