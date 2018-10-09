@@ -220,3 +220,5 @@ def local_view(time,flux, period, duration,\
       bin_width=30/24.0/num_bins,\
       t_min=-15.0/24.0,\
       t_max=15.0/24.0)
+
+#def generatebarelc(file)

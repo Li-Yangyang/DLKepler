@@ -16,6 +16,9 @@ from astropy import constants as const
 from astropy.stats import sigma_clipped_stats
 import math
 import re
+#from itertools import repeat
+#from functools import partial
+
 
 #cata_path = '../../../../catalog/Kepler/cumulative.csv'
 #columns = ['koi_ror', 'koi_duration', 'koi_sma', 'koi_period', 'koi_srad', 'koi_smass']
@@ -25,6 +28,7 @@ import re
 #paras_frame = paras_frame.rename(index=str, columns=rename)
 #paras_frame = paras_frame.dropna()
 
+
 def incl(rprs, a, srad, duration, P):
     a = 215.0537*a
     ars = a/srad
@@ -33,6 +37,8 @@ def incl(rprs, a, srad, duration, P):
     frac2 = ars**2.0*(np.sin(np.pi*duration/P)**2.0-1)
     incl = np.arcsin(np.sqrt(frac1/frac2))*180/np.pi
     return incl
+
+
 
 class ParaSampler(object):
     """
@@ -74,21 +80,13 @@ class LcNoiseSampler(object):
         self.data_path = data_path
         self.kepid = np.random.choice(kepio.get_id(self.catalog))
 
-    def generator(self, timescale):
-        all_time = []
-        all_flux = []
-        filedir = kepio.pathfinder(self.kepid, self.data_path, '*')
-        filenames = glob.glob(filedir)
-        filenames.sort()
-        datepat = re.compile(r'Q+\d+')
-        index = 0
-        for i in range(len(filenames)):
-            index = datepat.findall(filenames[i])[0][1:]
-            rms = self.catalog.loc[lambda df: df.kepid == self.kepid, 'Q'+index+'rms'].values[0]
+    def generateone(self, lc):
+        with lc.open() as f:
+            index = f[0].header['QUARTER']
+            rms = self.catalog.loc[lambda df: df.kepid == self.kepid, 'Q'+str(index)+'rms'].values[0]
             #read into cadence
-            instr = fits.open(filenames[i])
             #read into time series
-            intime = kepreduce.fetchtseries(instr, filenames[i])
+            intime = kepreduce.fetchtseries(f, lc)
             #simulate
             rs = np.random.RandomState(seed=13)
             flux1 = np.zeros(intime.size)+ 1.0
@@ -96,13 +94,9 @@ class LcNoiseSampler(object):
             #errors1 = cdpp*1e-06*np.ones_like(nordata)*math.sqrt(timescale * 3600.0 / cadence)#correct from cdpp to std
             #add gaussian noise
             flux1 += errors1*rs.randn(len(intime))
-            all_time.append(intime)
-            all_flux.append(flux1)
-            instr.close()
-        t = np.concatenate(all_time)
-        simflux = np.concatenate(all_flux)
+        return intime, flux1
 
-        return t, simflux
+
     #i = 0
     #paras_pop = []
     #while(i<10000):

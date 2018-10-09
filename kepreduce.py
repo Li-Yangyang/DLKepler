@@ -66,10 +66,13 @@ def fetchtseries(instr, lc_path):
     work1 = work1[~np.isnan(work1).any(1)]
 
     intime = work1[:,1]
-    indata = work1[:,0]
+    #indata = work1[:,0]
     #split lc
-    intime, indata = keputils.split(intime, indata, gap_width = 0.75)
+    #intime, indata = keputils.split(intime, indata, gap_width = 0.75)
 
-    intime = np.concatenate(intime).ravel()
+    #adopt uniform distribution
+    #intime = np.concatenate(intime).ravel()
+    #print(intime.min, intime.max, intime.size)
+    tseries = np.linspace(np.min(intime), np.max(intime), np.shape(intime)[0])
 
-    return intime
+    return tseries
