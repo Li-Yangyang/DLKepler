@@ -144,11 +144,11 @@ def simulate_one(smass, srad, duration, catalog, data_path, injection):
                  'std': np.std(flux), 'flag':0.0}
         lc = np.array([profile['phase'], profile['flux']])
 
-        return para, lc
+        return para, lc, injection
 
 def save_to_hdf(para, lc, seq, filename=None):
     if filename is None:
-        filename = os.path.join('./result/','simpopset4.h5')
+        filename = os.path.join('./result/','zeropopset.h5')
     #mode:  Read/write if exists, create otherwise (default)
     f = h5py.File(filename,'a')
     grp = f.create_group(str(seq))
@@ -190,10 +190,15 @@ if __name__ == '__main__':
         try:
             para, lc, cksnr= simulate_one(smass, srad, duration, catalog, data_path, args.flag)
             #print(flag)
-            if(cksnr==1.0):
+            if(args.flag==1.0):
+                if(cksnr==1.0):
+                    i = i + 1
+                    #save to hdf
+                    sf = save_to_hdf(para, lc, i)
+                    sf.close()
+            else:
                 i = i + 1
-                #save to hdf
-                sf = save_to_hdf(para, lc, i+1999)
+                sf = save_to_hdf(para,lc,i)
                 sf.close()
         except RuntimeWarning:
             pass
@@ -204,5 +209,5 @@ if __name__ == '__main__':
     ps = pstats.Stats(pr, stream=s).sort_stats('tottime')
     ps.print_stats()
 
-    with open('./log/sim'+str(args.n)+'.txt', 'w+') as f:
+    with open('./log/zero'+str(args.n)+'.txt', 'w+') as f:
         f.write(s.getvalue())
