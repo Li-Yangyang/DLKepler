@@ -98,8 +98,10 @@ def simulate_one(smass, srad, duration, catalog, data_path, injection):
          task = [ lc for lc in lcs]
          #print(task)
          #prod_lc=partial(generateone, kepid=self.kepid, catalog=self.catalog)
-         t, simflux = np.transpose(p.map(B.generateone, task, 4))
-         #print(t)
+         cube = np.transpose(p.map(B.generateone, task, 4))
+         t = cube[0]
+         simflux = cube[1]
+         print(np.shape(cube))
     t = np.concatenate(t)
     bareflux = np.concatenate(simflux)
 
@@ -146,7 +148,7 @@ def simulate_one(smass, srad, duration, catalog, data_path, injection):
 
 def save_to_hdf(para, lc, seq, filename=None):
     if filename is None:
-        filename = os.path.join('./result/','simpopsettest.h5')
+        filename = os.path.join('./result/','simpopset.h5')
     #mode:  Read/write if exists, create otherwise (default)
     f = h5py.File(filename,'a')
     grp = f.create_group(str(seq))
@@ -202,5 +204,5 @@ if __name__ == '__main__':
     ps = pstats.Stats(pr, stream=s).sort_stats('tottime')
     ps.print_stats()
 
-    with open('test5.txt', 'w+') as f:
+    with open('./log/sim'+str(args.n)+'.txt', 'w+') as f:
         f.write(s.getvalue())
