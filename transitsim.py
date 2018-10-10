@@ -198,7 +198,7 @@ if __name__ == '__main__':
                     sf.close()
             else:
                 i = i + 1
-                sf = save_to_hdf(para,lc,i)
+                sf = save_to_hdf(para,lc,i+1355)
                 sf.close()
         except RuntimeWarning:
             pass
