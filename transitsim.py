@@ -193,7 +193,7 @@ if __name__ == '__main__':
             if(cksnr==1.0):
                 i = i + 1
                 #save to hdf
-                sf = save_to_hdf(para, lc, i+1799)
+                sf = save_to_hdf(para, lc, i+1999)
                 sf.close()
         except RuntimeWarning:
             pass
