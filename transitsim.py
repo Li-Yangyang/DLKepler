@@ -148,7 +148,7 @@ def simulate_one(smass, srad, duration, catalog, data_path, injection):
 
 def save_to_hdf(para, lc, seq, filename=None):
     if filename is None:
-        filename = os.path.join('./result/','simpopset2.h5')
+        filename = os.path.join('./result/','simpopset3.h5')
     #mode:  Read/write if exists, create otherwise (default)
     f = h5py.File(filename,'a')
     grp = f.create_group(str(seq))
@@ -193,7 +193,7 @@ if __name__ == '__main__':
             if(cksnr==1.0):
                 i = i + 1
                 #save to hdf
-                sf = save_to_hdf(para, lc, i+409)
+                sf = save_to_hdf(para, lc, i+1071)
                 sf.close()
         except RuntimeWarning:
             pass
