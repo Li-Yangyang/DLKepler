@@ -1,0 +1,32 @@
+2018-10-11 16:20:01,512: Kepler=12.89 ignored.
+2018-10-11 16:20:01,517: Downloading http://waps.cfa.harvard.edu/MIST/data/tarballs_v1.1/MIST_v1.1_vvcrit0.0_UBVRIplus.tar.gz...
+2018-10-11 16:20:41,858: Extracting UBVRIplus.tgz...
+2018-10-11 16:20:52,287: /home/yangyangli/.isochrones/mist/MIST_v1.1_vvcrit0.0_UBVRIplus.h5 written.
+2018-10-11 16:20:54,093: Downloading http://waps.cfa.harvard.edu/MIST/data/tarballs_v1.1/MIST_v1.1_vvcrit0.0_WISE.tar.gz...
+2018-10-11 16:21:16,344: Extracting WISE.tgz...
+2018-10-11 16:21:21,999: /home/yangyangli/.isochrones/mist/MIST_v1.1_vvcrit0.0_WISE.h5 written.
+2018-10-11 16:21:22,466: Downloading http://waps.cfa.harvard.edu/MIST/data/tarballs_v1.1/MIST_v1.1_vvcrit0.0_SDSS.tar.gz...
+2018-10-11 16:21:46,261: Extracting SDSS.tgz...
+2018-10-11 16:21:52,267: /home/yangyangli/.isochrones/mist/MIST_v1.1_vvcrit0.0_SDSS.h5 written.
+2018-10-11 16:22:11,648: Too few points to create valid contours
+2018-10-11 16:22:11,662: Too few points to create valid contours
+2018-10-11 16:22:12,912: Too few points to create valid contours
+2018-10-11 16:22:12,978: Too few points to create valid contours
+2018-10-11 16:22:12,993: Too few points to create valid contours
+2018-10-11 16:22:13,060: Too few points to create valid contours
+2018-10-11 16:22:13,077: Too few points to create valid contours
+2018-10-11 16:22:13,093: Too few points to create valid contours
+2018-10-11 16:22:13,159: Too few points to create valid contours
+2018-10-11 16:22:13,175: Too few points to create valid contours
+2018-10-11 16:22:13,190: Too few points to create valid contours
+2018-10-11 16:22:13,204: Too few points to create valid contours
+2018-10-11 16:22:13,698: Too few points to create valid contours
+2018-10-11 16:22:13,714: Too few points to create valid contours
+2018-10-11 16:22:13,730: Too few points to create valid contours
+2018-10-11 16:22:13,745: Too few points to create valid contours
+2018-10-11 16:22:13,761: Too few points to create valid contours
+2018-10-11 16:22:15,529: single starfit successful for . in 2.2 minutes.
+2018-10-11 16:22:15,530: Kepler=12.89 ignored.
+2018-10-11 16:22:42,561: binary starfit successful for . in 0.5 minutes.
+2018-10-11 16:22:42,562: Kepler=12.89 ignored.
+2018-10-11 16:23:15,153: triple starfit successful for . in 0.5 minutes.

@@ -1,0 +1,206 @@
+2018-10-11 16:11:50,514: FPP calculation failed for ..
+Traceback (most recent call last):
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/vespa/fpp.py", line 222, in from_ini
+    single_starmodel = StarModel.load_hdf(single_starmodel_file)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/isochrones/starmodel.py", line 1120, in load_hdf
+    raise IOError('{} does not exist.'.format(filename))
+OSError: ./mist_starmodel_single.h5 does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yangyangli/.local/bin/calcfpp", line 151, in <module>
+    n=args.n)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/vespa/fpp.py", line 228, in from_ini
+    'Please run `starfit --all {}`.'.format(folder))
+RuntimeError: Cannot load StarModels.  Please run `starfit --all .`.
+2018-10-11 16:15:29,323: FPP calculation failed for ..
+Traceback (most recent call last):
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/vespa/fpp.py", line 222, in from_ini
+    single_starmodel = StarModel.load_hdf(single_starmodel_file)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/isochrones/starmodel.py", line 1120, in load_hdf
+    raise IOError('{} does not exist.'.format(filename))
+OSError: ./mist_starmodel_single.h5 does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yangyangli/.local/bin/calcfpp", line 151, in <module>
+    n=args.n)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/vespa/fpp.py", line 228, in from_ini
+    'Please run `starfit --all {}`.'.format(folder))
+RuntimeError: Cannot load StarModels.  Please run `starfit --all .`.
+2018-10-11 16:23:56,992: Fitting transitsignal with MCMC...
+2018-10-11 16:23:56,993: Fitting data to trapezoid shape with MCMC for 201920032....
+2018-10-11 16:23:57,515: FPP calculation failed for ..
+Traceback (most recent call last):
+  File "/home/yangyangli/.local/bin/calcfpp", line 151, in <module>
+    n=args.n)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/vespa/fpp.py", line 246, in from_ini
+    trsig.MCMC()
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/vespa/transitsignal.py", line 300, in MCMC
+    self.Ts_acor = integrated_time(Ts)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/emcee/autocorr.py", line 88, in integrated_time
+    f = function(x, axis=axis, fast=fast)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/emcee/autocorr.py", line 41, in function
+    acf = np.fft.ifft(f * np.conjugate(f), axis=axis)[m].real
+FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+2018-10-11 16:28:54,002: Fitting transitsignal with MCMC...
+2018-10-11 16:28:54,002: Fitting data to trapezoid shape with MCMC for 201920032....
+2018-10-11 16:28:54,502: FPP calculation failed for ..
+Traceback (most recent call last):
+  File "/home/yangyangli/.local/bin/calcfpp", line 151, in <module>
+    n=args.n)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/vespa/fpp.py", line 246, in from_ini
+    trsig.MCMC()
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/vespa/transitsignal.py", line 300, in MCMC
+    self.Ts_acor = integrated_time(Ts)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/emcee/autocorr.py", line 88, in integrated_time
+    f = function(x, axis=axis, fast=fast)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/emcee/autocorr.py", line 41, in function
+    acf = np.fft.ifft(f * np.conjugate(f), axis=axis)[m].real
+FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+2018-10-11 16:32:38,101: Fitting transitsignal with MCMC...
+2018-10-11 16:32:38,101: Fitting data to trapezoid shape with MCMC for 201920032....
+2018-10-11 16:32:38,620: FPP calculation failed for ..
+Traceback (most recent call last):
+  File "/home/yangyangli/.local/bin/calcfpp", line 151, in <module>
+    n=args.n)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/vespa/fpp.py", line 246, in from_ini
+    trsig.MCMC()
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/vespa/transitsignal.py", line 300, in MCMC
+    self.Ts_acor = integrated_time(Ts)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/emcee/autocorr.py", line 88, in integrated_time
+    f = function(x, axis=axis, fast=fast)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/emcee/autocorr.py", line 41, in function
+    acf = np.fft.ifft(f * np.conjugate(f), axis=axis)[m].real
+FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+2018-10-11 18:12:54,879: Fitting transitsignal with MCMC...
+2018-10-11 18:12:54,879: Fitting data to trapezoid shape with MCMC for 201920032....
+2018-10-11 18:12:55,820: Generating ['beb', 'heb', 'eb', 'beb_Px2', 'heb_Px2', 'eb_Px2', 'pl'] models for PopulationSet...
+2018-10-11 18:13:11,105: Downloading http://stellar.dartmouth.edu/models/isochrones/UBVRIJHKsKp.tgz...
+2018-10-11 18:13:22,535: Extracting UBVRIJHKsKp.tgz...
+2018-10-11 18:13:25,017: /home/yangyangli/.isochrones/dartmouth/UBVRIJHKsKp.h5 written.
+2018-10-11 18:13:25,182: Downloading http://stellar.dartmouth.edu/models/isochrones/SDSSugriz.tgz...
+2018-10-11 18:13:32,664: Extracting SDSSugriz.tgz...
+2018-10-11 18:13:34,372: /home/yangyangli/.isochrones/dartmouth/SDSSugriz.h5 written.
+2018-10-11 18:13:34,397: Downloading files for dartmouth model grid: ('dartmouth.tri',)...
+2018-10-11 18:15:35,186: 168 M1s are nan
+2018-10-11 18:15:35,186: 168 M2s are nan
+2018-10-11 18:15:35,186: 168 R1s are nan
+2018-10-11 18:15:35,186: 168 R2s are nan
+2018-10-11 18:15:38,583: 802 eclipsing HEB systems generated (target 1000)
+2018-10-11 18:15:38,586: 48 M1s are nan
+2018-10-11 18:15:38,586: 48 M2s are nan
+2018-10-11 18:15:38,586: 48 R1s are nan
+2018-10-11 18:15:38,586: 48 R2s are nan
+2018-10-11 18:15:38,616: 1048 eclipsing HEB systems generated (target 1000)
+2018-10-11 18:15:38,664: Fitting trapezoid models for HEBs...
+2018-10-11 18:15:40,046: Done.
+2018-10-11 18:15:40,465: 183 M1s are nan
+2018-10-11 18:15:40,466: 183 M2s are nan
+2018-10-11 18:15:40,466: 183 R1s are nan
+2018-10-11 18:15:40,466: 183 R2s are nan
+2018-10-11 18:15:40,530: 780 eclipsing HEB systems generated (target 1000)
+2018-10-11 18:15:40,533: 60 M1s are nan
+2018-10-11 18:15:40,533: 60 M2s are nan
+2018-10-11 18:15:40,533: 60 R1s are nan
+2018-10-11 18:15:40,533: 60 R2s are nan
+2018-10-11 18:15:40,571: 1055 eclipsing HEB systems generated (target 1000)
+2018-10-11 18:15:40,619: Fitting trapezoid models for HEBs (Double Period)...
+2018-10-11 18:15:42,017: Done.
+2018-10-11 18:15:42,438: 35 M1s are nan
+2018-10-11 18:15:42,439: 35 M2s are nan
+2018-10-11 18:15:42,439: 35 R1s are nan
+2018-10-11 18:15:42,439: 35 R2s are nan
+2018-10-11 18:15:42,467: 958 Eclipsing EB systems generated (target 1000)
+2018-10-11 18:15:42,468: 4 M1s are nan
+2018-10-11 18:15:42,468: 4 M2s are nan
+2018-10-11 18:15:42,468: 4 R1s are nan
+2018-10-11 18:15:42,468: 4 R2s are nan
+2018-10-11 18:15:42,484: 1054 Eclipsing EB systems generated (target 1000)
+2018-10-11 18:15:42,511: Fitting trapezoid models for EBs...
+2018-10-11 18:15:43,904: Done.
+2018-10-11 18:15:44,274: 50 M1s are nan
+2018-10-11 18:15:44,274: 50 M2s are nan
+2018-10-11 18:15:44,274: 50 R1s are nan
+2018-10-11 18:15:44,274: 50 R2s are nan
+2018-10-11 18:15:44,308: 942 Eclipsing EB systems generated (target 1000)
+2018-10-11 18:15:44,310: 3 M1s are nan
+2018-10-11 18:15:44,310: 3 M2s are nan
+2018-10-11 18:15:44,310: 3 R1s are nan
+2018-10-11 18:15:44,310: 3 R2s are nan
+2018-10-11 18:15:44,329: 1039 Eclipsing EB systems generated (target 1000)
+2018-10-11 18:15:44,356: Fitting trapezoid models for EBs (Double Period)...
+2018-10-11 18:15:45,965: Done.
+2018-10-11 18:15:46,013: Getting TRILEGAL simulation at 174.1069167, 7.753111111...
+2018-10-11 18:16:28,640: Done.
+2018-10-11 18:16:28,888: Downloading http://stellar.dartmouth.edu/models/isochrones/WISE.tgz...
+2018-10-11 18:16:35,609: Extracting WISE.tgz...
+2018-10-11 18:16:37,176: /home/yangyangli/.isochrones/dartmouth/WISE.h5 written.
+2018-10-11 18:16:38,184: 0 M1s are nan
+2018-10-11 18:16:38,184: 1 M2s are nan
+2018-10-11 18:16:38,184: 0 R1s are nan
+2018-10-11 18:16:38,184: 1 R2s are nan
+2018-10-11 18:16:38,187: 11 binaries are "too close"; gave up trying to fix.
+2018-10-11 18:16:38,219: 430 BEB systems generated (target 1000)
+2018-10-11 18:16:38,221: 0 M1s are nan
+2018-10-11 18:16:38,221: 1 M2s are nan
+2018-10-11 18:16:38,221: 0 R1s are nan
+2018-10-11 18:16:38,221: 1 R2s are nan
+2018-10-11 18:16:38,225: 21 binaries are "too close"; gave up trying to fix.
+2018-10-11 18:16:38,248: 658 BEB systems generated (target 1000)
+2018-10-11 18:16:38,250: 0 M1s are nan
+2018-10-11 18:16:38,250: 2 M2s are nan
+2018-10-11 18:16:38,250: 0 R1s are nan
+2018-10-11 18:16:38,250: 2 R2s are nan
+2018-10-11 18:16:38,256: 29 binaries are "too close"; gave up trying to fix.
+2018-10-11 18:16:38,300: 1638 BEB systems generated (target 1000)
+2018-10-11 18:16:38,357: Fitting trapezoid models for BEBs...
+2018-10-11 18:16:39,758: Done.
+2018-10-11 18:16:39,789: Loading TRILEGAL simulation from ./starfield.h5
+2018-10-11 18:16:40,977: 8 binaries are "too close"; gave up trying to fix.
+2018-10-11 18:16:41,012: 195 BEB systems generated (target 1000)
+2018-10-11 18:16:41,015: 0 M1s are nan
+2018-10-11 18:16:41,016: 6 M2s are nan
+2018-10-11 18:16:41,016: 0 R1s are nan
+2018-10-11 18:16:41,016: 6 R2s are nan
+2018-10-11 18:16:41,024: 39 binaries are "too close"; gave up trying to fix.
+2018-10-11 18:16:41,070: 629 BEB systems generated (target 1000)
+2018-10-11 18:16:41,074: 0 M1s are nan
+2018-10-11 18:16:41,074: 5 M2s are nan
+2018-10-11 18:16:41,074: 0 R1s are nan
+2018-10-11 18:16:41,074: 5 R2s are nan
+2018-10-11 18:16:41,083: 47 binaries are "too close"; gave up trying to fix.
+2018-10-11 18:16:41,140: 1928 BEB systems generated (target 1000)
+2018-10-11 18:16:41,196: Fitting trapezoid models for BEBs (Double Period)...
+2018-10-11 18:16:42,635: Done.
+2018-10-11 18:16:42,769: 878 Transiting planet systems generated (target 1000)
+2018-10-11 18:16:42,795: 1009 Transiting planet systems generated (target 1000)
+2018-10-11 18:16:42,856: Fitting trapezoid models for Planets...
+2018-10-11 18:16:44,405: Done.
+2018-10-11 18:16:44,936: Empty population (EBs (Double Period)): < 4 valid systems! Cannot calculate lhood.
+2018-10-11 18:16:44,957: FPP calculation failed for ..
+Traceback (most recent call last):
+  File "/home/yangyangli/.local/bin/calcfpp", line 151, in <module>
+    n=args.n)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/vespa/fpp.py", line 307, in from_ini
+    cc = ContrastCurveFromFile(ccfile, band, name=name)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/vespa/stars/contrastcurve.py", line 141, in __init__
+    rs,dmags = np.loadtxt(filename,unpack=True)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/numpy/lib/npyio.py", line 926, in loadtxt
+    fh = np.lib._datasource.open(fname, 'rt', encoding=encoding)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/numpy/lib/_datasource.py", line 262, in open
+    return ds.open(path, mode, encoding=encoding, newline=newline)
+  File "/home/yangyangli/.local/lib/python3.6/site-packages/numpy/lib/_datasource.py", line 618, in open
+    raise IOError("%s not found." % path)
+OSError: ./KeckII_K.cc not found.
+2018-10-11 18:23:33,238: Loading transit signal from ./trsig.pkl...
+2018-10-11 18:23:33,241: Populations (['beb', 'heb', 'eb', 'beb_Px2', 'heb_Px2', 'eb_Px2', 'pl']) already generated.
+2018-10-11 18:23:49,146: Empty population (EBs (Double Period)): < 4 valid systems! Cannot calculate lhood.
+2018-10-11 18:23:49,191: Empty population (HEBs (Double Period)): < 4 valid systems! Cannot calculate lhood.
+2018-10-11 18:23:49,218: Empty population (EBs (Double Period)): < 4 valid systems! Cannot calculate lhood.
+2018-10-11 18:23:49,233: Empty population (BEBs): < 4 valid systems! Cannot calculate lhood.
+2018-10-11 18:23:49,248: Empty population (BEBs (Double Period)): < 4 valid systems! Cannot calculate lhood.
+2018-10-11 18:23:49,248: KeckII K-band cc not applied to Planets model
+2018-10-11 18:23:51,888: FPP calculation successful. Results/plots written to /scratch/yyl/noisecorre/scripts/vespa/201920032.

@@ -15,6 +15,7 @@ from transit_basic import *
 import h5py
 import kplr
 from multiprocessing import Pool
+import urllib
 
 def reframe(catalog, columnsnames, newnames):
     renames = dict(zip(columnsnames, newnames))
@@ -148,7 +149,7 @@ def simulate_one(smass, srad, duration, catalog, data_path, injection):
 
 def save_to_hdf(para, lc, seq, filename=None):
     if filename is None:
-        filename = os.path.join('./result/','zeropopset.h5')
+        filename = os.path.join('./result/','popset.h5')
     #mode:  Read/write if exists, create otherwise (default)
     f = h5py.File(filename,'a')
     grp = f.create_group(str(seq))
@@ -194,13 +195,13 @@ if __name__ == '__main__':
                 if(cksnr==1.0):
                     i = i + 1
                     #save to hdf
-                    sf = save_to_hdf(para, lc, i)
+                    sf = save_to_hdf(para, lc, i, './result/vsimpopset.h5')
                     sf.close()
             else:
                 i = i + 1
-                sf = save_to_hdf(para,lc,i+1355)
+                sf = save_to_hdf(para,lc,i, './result/vzeropopset.h5')
                 sf.close()
-        except RuntimeWarning:
+        except (RuntimeWarning, TimeoutError, urllib.error.URLError) as e:
             pass
 
     #simtransitpop(catalog, data_path, n=args.n)
@@ -209,5 +210,5 @@ if __name__ == '__main__':
     ps = pstats.Stats(pr, stream=s).sort_stats('tottime')
     ps.print_stats()
 
-    with open('./log/zero'+str(args.n)+'.txt', 'w+') as f:
+    with open('./log/'+str(args.flag)+str(args.n)+'.txt', 'w+') as f:
         f.write(s.getvalue())
