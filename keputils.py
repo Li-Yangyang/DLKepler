@@ -197,8 +197,8 @@ def global_view(time, flux, period, num_bins=2000):
       t_max=period / 2)
 
 
-def local_view(time,flux, period, duration,\
-               num_bins=200):
+def local_view(time,flux, period, duration, bin_width_factor=0.16,\
+               num_bins=201, num_durations=4):
   """Generates a 'local view' of a phase folded light curve.
   See Section 3.3 of Shallue & Vanderburg, 2018, The Astronomical Journal.
   http://iopscience.iop.org/article/10.3847/1538-3881/aa9e09/meta
@@ -217,8 +217,8 @@ def local_view(time,flux, period, duration,\
   """
   return generate_view(time,flux,\
       num_bins=num_bins,\
-      bin_width=30/24.0/num_bins,\
-      t_min=-15.0/24.0,\
-      t_max=15.0/24.0)
+      bin_width=bin_width_factor*duration,\
+      t_min=max(-period / 2, -duration * num_durations),\
+      t_max=min(period / 2, duration * num_durations))
 
 #def generatebarelc(file)

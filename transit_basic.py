@@ -75,9 +75,10 @@ class ParaSampler(object):
 class LcNoiseSampler(object):
     """
     """
-    def __init__(self, catalog, data_path):
+    def __init__(self, catalog, data_path, rprs):
         self.catalog = catalog
         self.data_path = data_path
+        self.rprs = rprs
         self.kepid = np.random.choice(kepio.get_id(self.catalog))
 
     def generateone(self, lc):
